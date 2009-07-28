@@ -1,7 +1,7 @@
 require("spec_helper.js");
 require("../../public/javascripts/application.js");
 
-Screw.Unit(function(){
+Screw.Unit(function(c) { with(c) {
   describe("Your application javascript", function(){
     it("does something", function(){
       expect("hello").to(equal, "hello");
@@ -11,5 +11,5 @@ Screw.Unit(function(){
       expect($('.select_me').length).to(equal, 2);
     });
   });
-});
+}});
 
